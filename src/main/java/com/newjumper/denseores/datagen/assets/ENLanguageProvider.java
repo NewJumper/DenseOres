@@ -33,6 +33,9 @@ public class ENLanguageProvider extends LanguageProvider {
             }
         }
 
-        return builder.toString();
+        String name = builder.toString();
+        if(name.contains("Lapis")) name = name.substring(0, name.indexOf("Ore")) + "Lazuli Ore";
+
+        return name;
     }
 }
