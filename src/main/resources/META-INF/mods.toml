@@ -8,7 +8,7 @@ license="AGPL-3.0"
 
     displayName="Dense Ores"
     authors="NewJumper"
-#    logoFile="logo.png"
+    logoFile="banner.png"
 
     description='''Ores that drop more materials!'''
 
