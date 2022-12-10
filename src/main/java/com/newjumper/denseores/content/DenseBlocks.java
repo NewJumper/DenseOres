@@ -1,7 +1,6 @@
-package com.newjumper.denseores.blocks;
+package com.newjumper.denseores.content;
 
 import com.newjumper.denseores.DenseOres;
-import com.newjumper.denseores.util.DenseCreativeTab;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;

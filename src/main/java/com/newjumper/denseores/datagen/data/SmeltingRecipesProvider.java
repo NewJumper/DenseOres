@@ -2,7 +2,7 @@ package com.newjumper.denseores.datagen.data;
 
 import com.google.common.collect.ImmutableList;
 import com.newjumper.denseores.DenseOres;
-import com.newjumper.denseores.blocks.DenseBlocks;
+import com.newjumper.denseores.content.DenseBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;

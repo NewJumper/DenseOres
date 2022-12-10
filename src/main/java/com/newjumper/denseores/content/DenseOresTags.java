@@ -1,4 +1,4 @@
-package com.newjumper.denseores.util;
+package com.newjumper.denseores.content;
 
 import com.newjumper.denseores.DenseOres;
 import net.minecraft.resources.ResourceLocation;

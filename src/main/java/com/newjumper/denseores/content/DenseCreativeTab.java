@@ -1,6 +1,5 @@
-package com.newjumper.denseores.util;
+package com.newjumper.denseores.content;
 
-import com.newjumper.denseores.blocks.DenseBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.NotNull;

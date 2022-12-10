@@ -2,7 +2,7 @@ package com.newjumper.denseores.world;
 
 import com.google.common.base.Suppliers;
 import com.newjumper.denseores.DenseOres;
-import com.newjumper.denseores.blocks.DenseBlocks;
+import com.newjumper.denseores.content.DenseBlocks;
 import net.minecraft.core.Registry;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;

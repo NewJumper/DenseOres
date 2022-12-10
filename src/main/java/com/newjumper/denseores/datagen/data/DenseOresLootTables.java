@@ -1,6 +1,6 @@
 package com.newjumper.denseores.datagen.data;
 
-import com.newjumper.denseores.blocks.DenseBlocks;
+import com.newjumper.denseores.content.DenseBlocks;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;

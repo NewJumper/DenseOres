@@ -1,7 +1,7 @@
 package com.newjumper.denseores.datagen.assets;
 
 import com.newjumper.denseores.DenseOres;
-import com.newjumper.denseores.blocks.DenseBlocks;
+import com.newjumper.denseores.content.DenseBlocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;

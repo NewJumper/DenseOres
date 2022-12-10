@@ -1,7 +1,7 @@
 package com.newjumper.denseores.datagen.data;
 
 import com.newjumper.denseores.DenseOres;
-import com.newjumper.denseores.util.DenseOresTags;
+import com.newjumper.denseores.content.DenseOresTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;

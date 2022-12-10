@@ -1,6 +1,6 @@
 package com.newjumper.denseores;
 
-import com.newjumper.denseores.blocks.DenseBlocks;
+import com.newjumper.denseores.content.DenseBlocks;
 import com.newjumper.denseores.world.DenseConfiguredFeatures;
 import com.newjumper.denseores.world.DensePlacedFeatures;
 import net.minecraftforge.common.MinecraftForge;
