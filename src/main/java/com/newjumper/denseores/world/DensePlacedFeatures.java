@@ -27,6 +27,9 @@ public class DensePlacedFeatures {
     public static final RegistryObject<PlacedFeature> DENSE_DIAMOND_SMALL = PLACED_FEATURES.register("dense_diamond_small", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_DIAMOND_SMALL.getHolder().get(), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-90), VerticalAnchor.aboveBottom(90)))));
     public static final RegistryObject<PlacedFeature> DENSE_DIAMOND_LARGE = PLACED_FEATURES.register("dense_diamond_large", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_DIAMOND_LARGE.getHolder().get(), rareOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
 
+    public static final RegistryObject<PlacedFeature> DENSE_NETHER_GOLD = PLACED_FEATURES.register("dense_nether_gold", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_NETHER_GOLD.getHolder().get(), commonOrePlacement(7, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.belowTop(10)))));
+    public static final RegistryObject<PlacedFeature> DENSE_NETHER_QUARTZ = PLACED_FEATURES.register("dense_nether_quartz", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_NETHER_QUARTZ.getHolder().get(), commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.belowTop(10)))));
+
     public static List<PlacementModifier> orePlacement(PlacementModifier pModifier, PlacementModifier pHeightRange) {
         return List.of(pModifier, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
     }
