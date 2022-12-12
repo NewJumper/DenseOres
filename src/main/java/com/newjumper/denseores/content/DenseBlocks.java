@@ -36,6 +36,9 @@ public class DenseBlocks {
     public static final RegistryObject<Block> DENSE_DIAMOND_ORE = register("dense_diamond_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DIAMOND_ORE), UniformInt.of(4, 8)));
     public static final RegistryObject<Block> DENSE_DEEPSLATE_DIAMOND_ORE = register("dense_deepslate_diamond_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_DIAMOND_ORE), UniformInt.of(4, 8)));
 
+    public static final RegistryObject<Block> DENSE_NETHER_GOLD_ORE = register("dense_nether_gold_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_GOLD_ORE), UniformInt.of(1, 2)));
+    public static final RegistryObject<Block> DENSE_NETHER_QUARTZ_ORE = register("dense_nether_quartz_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE), UniformInt.of(3, 6)));
+
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> pBlock) {
         RegistryObject<T> block = BLOCKS.register(name, pBlock);
         ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(DenseCreativeTab.DENSEORES)));

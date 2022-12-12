@@ -21,7 +21,7 @@ public class SmeltingRecipesProvider extends RecipeProvider implements IConditio
     private static final ImmutableList<ItemLike> DENSE_COAL_ORES = ImmutableList.of(DenseBlocks.DENSE_COAL_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_IRON_ORES = ImmutableList.of(DenseBlocks.DENSE_IRON_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_COPPER_ORES = ImmutableList.of(DenseBlocks.DENSE_COPPER_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get());
-    private static final ImmutableList<ItemLike> DENSE_GOLD_ORES = ImmutableList.of(DenseBlocks.DENSE_GOLD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get());
+    private static final ImmutableList<ItemLike> DENSE_GOLD_ORES = ImmutableList.of(DenseBlocks.DENSE_GOLD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), DenseBlocks.DENSE_NETHER_GOLD_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_REDSTONE_ORES = ImmutableList.of(DenseBlocks.DENSE_REDSTONE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_EMERALD_ORES = ImmutableList.of(DenseBlocks.DENSE_EMERALD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get());
     private static final ImmutableList<ItemLike> DENSE_LAPIS_ORES = ImmutableList.of(DenseBlocks.DENSE_LAPIS_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());

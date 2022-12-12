@@ -29,8 +29,9 @@ public class DenseOresItemTagsProvider extends ItemTagsProvider {
         copy(Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE);
         copy(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, Tags.Items.ORES_IN_GROUND_DEEPSLATE);
 
-        copy(DenseOresTags.Blocks.DENSE_ORES, DenseOresTags.Items.DENSE_ORES);
+        copy(DenseOresTags.Blocks.DENSE_STONE_ORES, DenseOresTags.Items.DENSE_STONE_ORES);
         copy(DenseOresTags.Blocks.DENSE_DEEPSLATE_ORES, DenseOresTags.Items.DENSE_DEEPSLATE_ORES);
+        copy(DenseOresTags.Blocks.DENSE_NETHERRACK_ORES, DenseOresTags.Items.DENSE_NETHERRACK_ORES);
     }
 
     @NotNull

@@ -31,6 +31,9 @@ public class DenseOresItemModelProvider extends ItemModelProvider {
         blockModel(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE);
         blockModel(DenseBlocks.DENSE_DIAMOND_ORE);
         blockModel(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE);
+
+        blockModel(DenseBlocks.DENSE_NETHER_GOLD_ORE);
+        blockModel(DenseBlocks.DENSE_NETHER_QUARTZ_ORE);
     }
 
     public void blockModel(RegistryObject<Block> block) {

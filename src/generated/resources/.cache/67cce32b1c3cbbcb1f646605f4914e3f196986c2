@@ -1,4 +1,4 @@
-// 1.19.2	2022-12-09T22:10:41.302174	LootTables
+// 1.19.2	2022-12-11T21:36:58.6169035	LootTables
 c53ce3cc39799f951a64b02cf718d3f554150d19 data/denseores/loot_tables/blocks/dense_coal_ore.json
 e122c605aeddf8da588e5472a5c34b04f32ad39c data/denseores/loot_tables/blocks/dense_copper_ore.json
 c7d1f54d7134f537cc1dee0c127a6ff38ed3fbf8 data/denseores/loot_tables/blocks/dense_deepslate_coal_ore.json
@@ -14,4 +14,6 @@ dfdbba40912e3f2120c29f212aadc5e994527367 data/denseores/loot_tables/blocks/dense
 9b23c6451c0b93c85a0458178bcb6c08e167e988 data/denseores/loot_tables/blocks/dense_gold_ore.json
 40a936f26f049372a00f0766c594fb4dc993c5ce data/denseores/loot_tables/blocks/dense_iron_ore.json
 38591ce5851067ec33bfa154b8453d2231acf70d data/denseores/loot_tables/blocks/dense_lapis_ore.json
+d4407282b21b07051d6b5c325c56fb580a835438 data/denseores/loot_tables/blocks/dense_nether_gold_ore.json
+93533bd93b56443ab575e747a9278d0b78f0127c data/denseores/loot_tables/blocks/dense_nether_quartz_ore.json
 f6ed6b17adbe1e999e5436c8005f515873ba9ba2 data/denseores/loot_tables/blocks/dense_redstone_ore.json

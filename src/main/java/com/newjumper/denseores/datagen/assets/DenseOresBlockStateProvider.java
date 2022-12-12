@@ -29,5 +29,8 @@ public class DenseOresBlockStateProvider extends BlockStateProvider {
         simpleBlock(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());
         simpleBlock(DenseBlocks.DENSE_DIAMOND_ORE.get());
         simpleBlock(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());
+
+        simpleBlock(DenseBlocks.DENSE_NETHER_GOLD_ORE.get());
+        simpleBlock(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get());
     }
 }

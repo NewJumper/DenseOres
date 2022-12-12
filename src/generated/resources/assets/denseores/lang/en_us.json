@@ -14,6 +14,8 @@
   "block.denseores.dense_gold_ore": "Dense Gold Ore",
   "block.denseores.dense_iron_ore": "Dense Iron Ore",
   "block.denseores.dense_lapis_ore": "Dense Lapis Lazuli Ore",
+  "block.denseores.dense_nether_gold_ore": "Dense Nether Gold Ore",
+  "block.denseores.dense_nether_quartz_ore": "Dense Nether Quartz Ore",
   "block.denseores.dense_redstone_ore": "Dense Redstone Ore",
   "itemGroup.denseores": "Dense Ores"
 }

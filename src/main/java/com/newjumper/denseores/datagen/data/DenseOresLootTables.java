@@ -33,6 +33,9 @@ public class DenseOresLootTables extends BlockLoot {
         this.add(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), Items.LAPIS_LAZULI, 7, 11));
         this.add(DenseBlocks.DENSE_DIAMOND_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DIAMOND_ORE.get(), Items.DIAMOND, 2, 3));
         this.add(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get(), Items.DIAMOND, 2, 3));
+
+        this.add(DenseBlocks.DENSE_NETHER_GOLD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_NETHER_GOLD_ORE.get(), Items.GOLD_NUGGET, 4, 12));
+        this.add(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get(), Items.QUARTZ, 2, 4));
     }
 
     private LootTable.Builder createDenseOreDrop(Block pBlock, Item pItem, int pMin, int pMax) {
