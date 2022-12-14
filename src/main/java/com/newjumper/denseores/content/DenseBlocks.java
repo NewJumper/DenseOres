@@ -38,6 +38,7 @@ public class DenseBlocks {
 
     public static final RegistryObject<Block> DENSE_NETHER_GOLD_ORE = register("dense_nether_gold_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_GOLD_ORE), UniformInt.of(1, 2)));
     public static final RegistryObject<Block> DENSE_NETHER_QUARTZ_ORE = register("dense_nether_quartz_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHER_QUARTZ_ORE), UniformInt.of(3, 6)));
+    public static final RegistryObject<Block> ANCIENT_NETHER_ORE = register("ancient_nether_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).strength(15, 100), UniformInt.of(1, 2)));
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> pBlock) {
         RegistryObject<T> block = BLOCKS.register(name, pBlock);

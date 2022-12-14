@@ -1,4 +1,5 @@
-// 1.19.2	2022-12-11T21:36:58.6188972	Block States: denseores
+// 1.19.2	2022-12-14T17:22:12.9932736	Block States: denseores
+6115269729ac837d041959c1bb553d8355434f44 assets/denseores/blockstates/ancient_nether_ore.json
 a9c1a5565a8e9221661cbf42f869fe0211404a58 assets/denseores/blockstates/dense_coal_ore.json
 a6a0036774d7e0441b245ee614d9ca5ae9e34ed4 assets/denseores/blockstates/dense_copper_ore.json
 e6cccbcdf23d20028e436b59451f5e9c04cebd2d assets/denseores/blockstates/dense_deepslate_coal_ore.json
@@ -17,6 +18,7 @@ aadb5cfe3af58d2f24da42236b575ebe39e65cbb assets/denseores/blockstates/dense_lapi
 bbb17e6df64c5ae09674d49f685f227ad9e962aa assets/denseores/blockstates/dense_nether_gold_ore.json
 6516ad81fc7862bf837e6804d6d4961b8de626f8 assets/denseores/blockstates/dense_nether_quartz_ore.json
 32e5a5e00670597471812999c7e2cde2cae2ad05 assets/denseores/blockstates/dense_redstone_ore.json
+5b405dc81429b4c1d073d3296fc88e38c47dc9c8 assets/denseores/models/block/ancient_nether_ore.json
 324dd0da7eb98b9d8e32c5b582280959f218d96c assets/denseores/models/block/dense_coal_ore.json
 36cc8f60741f40243bd4f627be86a79a23eceb9d assets/denseores/models/block/dense_copper_ore.json
 17e1c13a5e5585498ad1d0e1fe09376417523d81 assets/denseores/models/block/dense_deepslate_coal_ore.json

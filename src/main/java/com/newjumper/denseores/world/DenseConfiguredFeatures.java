@@ -26,6 +26,7 @@ public class DenseConfiguredFeatures {
     public static final Supplier<List<OreConfiguration.TargetBlockState>> DENSE_LAPIS_TARGET_LIST = Suppliers.memoize(() -> List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, DenseBlocks.DENSE_LAPIS_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> DENSE_DIAMOND_TARGET_LIST = Suppliers.memoize(() -> List.of(OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, DenseBlocks.DENSE_DIAMOND_ORE.get().defaultBlockState()), OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get().defaultBlockState())));
     public static final Supplier<List<OreConfiguration.TargetBlockState>> DENSE_QUARTZ_TARGET_LIST = Suppliers.memoize(() -> List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get().defaultBlockState())));
+    public static final Supplier<List<OreConfiguration.TargetBlockState>> ANCIENT_NETHER_TARGET_LIST = Suppliers.memoize(() -> List.of(OreConfiguration.target(OreFeatures.NETHER_ORE_REPLACEABLES, DenseBlocks.ANCIENT_NETHER_ORE.get().defaultBlockState())));
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_DENSE_COAL = CONFIGURED_FEATURES.register("ore_dense_coal", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DENSE_COAL_TARGET_LIST.get(), 8)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_DENSE_COAL_BURIED = CONFIGURED_FEATURES.register("ore_dense_coal_buried", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DENSE_COAL_TARGET_LIST.get(), 10, 0.9f)));
@@ -44,4 +45,6 @@ public class DenseConfiguredFeatures {
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_DENSE_NETHER_GOLD = CONFIGURED_FEATURES.register("ore_dense_nether_gold", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST.get(), 7)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_DENSE_NETHER_QUARTZ = CONFIGURED_FEATURES.register("ore_dense_nether_quartz", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DENSE_QUARTZ_TARGET_LIST.get(), 9, 0.1f)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_ANCIENT_NETHER_UPPER = CONFIGURED_FEATURES.register("ore_ancient_nether_upper", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST.get(), 8, 1f)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_ANCIENT_NETHER_LOWER = CONFIGURED_FEATURES.register("ore_ancient_nether_lower", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST.get(), 7, 0.8f)));
 }

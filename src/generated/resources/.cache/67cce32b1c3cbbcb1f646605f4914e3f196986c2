@@ -1,4 +1,5 @@
-// 1.19.2	2022-12-11T21:36:58.6169035	LootTables
+// 1.19.2	2022-12-14T17:22:12.9992739	LootTables
+1bbccd6132d68844176f8cce9dd5cde1aabece0c data/denseores/loot_tables/blocks/ancient_nether_ore.json
 c53ce3cc39799f951a64b02cf718d3f554150d19 data/denseores/loot_tables/blocks/dense_coal_ore.json
 e122c605aeddf8da588e5472a5c34b04f32ad39c data/denseores/loot_tables/blocks/dense_copper_ore.json
 c7d1f54d7134f537cc1dee0c127a6ff38ed3fbf8 data/denseores/loot_tables/blocks/dense_deepslate_coal_ore.json

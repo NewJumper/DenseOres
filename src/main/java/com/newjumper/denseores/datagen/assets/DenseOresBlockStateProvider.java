@@ -32,5 +32,6 @@ public class DenseOresBlockStateProvider extends BlockStateProvider {
 
         simpleBlock(DenseBlocks.DENSE_NETHER_GOLD_ORE.get());
         simpleBlock(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get());
+        simpleBlock(DenseBlocks.ANCIENT_NETHER_ORE.get());
     }
 }

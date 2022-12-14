@@ -36,6 +36,7 @@ public class DenseOresLootTables extends BlockLoot {
 
         this.add(DenseBlocks.DENSE_NETHER_GOLD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_NETHER_GOLD_ORE.get(), Items.GOLD_NUGGET, 4, 12));
         this.add(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get(), Items.QUARTZ, 2, 4));
+        this.add(DenseBlocks.ANCIENT_NETHER_ORE.get(), createDenseOreDrop(DenseBlocks.ANCIENT_NETHER_ORE.get(), Items.NETHERITE_SCRAP, 1, 2));
     }
 
     private LootTable.Builder createDenseOreDrop(Block pBlock, Item pItem, int pMin, int pMax) {

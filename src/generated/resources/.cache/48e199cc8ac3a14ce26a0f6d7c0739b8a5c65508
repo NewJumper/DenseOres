@@ -1,6 +1,6 @@
-// 1.19.2	2022-12-11T21:36:58.6097394	Item Tags
+// 1.19.2	2022-12-14T17:42:52.1358827	Item Tags
 7b4e30bd74191cdced88aabb405cc1a68118ba1f data/denseores/tags/items/dense_deepslate_ores.json
-2a249f90c848044b03bfec96f96f3ba0b1710c1b data/denseores/tags/items/dense_netherrack_ores.json
+9c8c0c25ac290bccc43a9943809dbc82384b4bfb data/denseores/tags/items/dense_netherrack_ores.json
 a8ad10e8ab71dc73288726d297dc5c4e0830e39a data/denseores/tags/items/dense_stone_ores.json
 959bf271182f5dd89febc752b0d31489ff65e408 data/forge/tags/items/ores.json
 6957be9a9b0c5e96a17091a6e41baf5a06c16431 data/forge/tags/items/ores/coal.json
@@ -10,6 +10,7 @@ a8ad10e8ab71dc73288726d297dc5c4e0830e39a data/denseores/tags/items/dense_stone_o
 12550fa8ae1d288203d95ce810e8b5cbe1c94e85 data/forge/tags/items/ores/gold.json
 7e49fc8f6feb78eb51005c70776c224a914e9a33 data/forge/tags/items/ores/iron.json
 65d765a0ca193d2cf7af8db0b2bde3d02cfe6f65 data/forge/tags/items/ores/lapis.json
+705d7b11d8cd18c92ac16c9451dd085ed4d83b6a data/forge/tags/items/ores/netherite_scrap.json
 bfa230fb90d14876bdc769c790f92c03fd52d3a0 data/forge/tags/items/ores/redstone.json
 dc51b84b2bb287463eb07c58c7d91d3bff7366ce data/forge/tags/items/ores_in_ground/deepslate.json
 af4f522f923ede68b4afa9ae32b12913a363a668 data/forge/tags/items/ores_in_ground/stone.json

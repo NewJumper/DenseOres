@@ -25,6 +25,7 @@ public class DenseOresItemTagsProvider extends ItemTagsProvider {
         copy(Tags.Blocks.ORES_EMERALD, Tags.Items.ORES_EMERALD);
         copy(Tags.Blocks.ORES_LAPIS, Tags.Items.ORES_LAPIS);
         copy(Tags.Blocks.ORES_DIAMOND, Tags.Items.ORES_DIAMOND);
+        copy(Tags.Blocks.ORES_NETHERITE_SCRAP, Tags.Items.ORES_NETHERITE_SCRAP);
         copy(Tags.Blocks.ORE_RATES_DENSE, Tags.Items.ORE_RATES_DENSE);
         copy(Tags.Blocks.ORES_IN_GROUND_STONE, Tags.Items.ORES_IN_GROUND_STONE);
         copy(Tags.Blocks.ORES_IN_GROUND_DEEPSLATE, Tags.Items.ORES_IN_GROUND_DEEPSLATE);
