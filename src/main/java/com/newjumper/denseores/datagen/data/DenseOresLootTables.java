@@ -21,16 +21,16 @@ public class DenseOresLootTables extends BlockLoot {
         this.add(DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get(), Items.COAL, 2, 4));
         this.add(DenseBlocks.DENSE_IRON_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_IRON_ORE.get(), Items.RAW_IRON, 2, 4));
         this.add(DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get(), Items.RAW_IRON, 2, 4));
-        this.add(DenseBlocks.DENSE_COPPER_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_COPPER_ORE.get(), Items.RAW_COPPER, 3, 8));
-        this.add(DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), Items.RAW_COPPER, 3, 7));
+        this.add(DenseBlocks.DENSE_COPPER_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_COPPER_ORE.get(), Items.RAW_COPPER, 4, 12));
+        this.add(DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), Items.RAW_COPPER, 4, 12));
         this.add(DenseBlocks.DENSE_GOLD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_GOLD_ORE.get(), Items.RAW_GOLD, 2, 4));
         this.add(DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), Items.RAW_GOLD, 2, 4));
-        this.add(DenseBlocks.DENSE_REDSTONE_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_REDSTONE_ORE.get(), Items.REDSTONE, 5, 8));
-        this.add(DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), Items.REDSTONE, 5, 8));
+        this.add(DenseBlocks.DENSE_REDSTONE_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_REDSTONE_ORE.get(), Items.REDSTONE, 6, 12));
+        this.add(DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), Items.REDSTONE, 6, 12));
         this.add(DenseBlocks.DENSE_EMERALD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_EMERALD_ORE.get(), Items.EMERALD, 2, 3));
-        this.add(DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), Items.EMERALD, 2, 4));
-        this.add(DenseBlocks.DENSE_LAPIS_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_LAPIS_ORE.get(), Items.LAPIS_LAZULI, 6, 11));
-        this.add(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), Items.LAPIS_LAZULI, 7, 11));
+        this.add(DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), Items.EMERALD, 2, 3));
+        this.add(DenseBlocks.DENSE_LAPIS_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_LAPIS_ORE.get(), Items.LAPIS_LAZULI, 6, 18));
+        this.add(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), Items.LAPIS_LAZULI, 6, 18));
         this.add(DenseBlocks.DENSE_DIAMOND_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DIAMOND_ORE.get(), Items.DIAMOND, 2, 3));
         this.add(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get(), createDenseOreDrop(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get(), Items.DIAMOND, 2, 3));
 
