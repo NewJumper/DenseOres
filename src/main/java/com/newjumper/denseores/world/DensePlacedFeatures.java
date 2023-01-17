@@ -1,44 +1,76 @@
 package com.newjumper.denseores.world;
 
 import com.newjumper.denseores.DenseOres;
-import net.minecraft.core.Registry;
+import net.minecraft.core.HolderGetter;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
 
 public class DensePlacedFeatures {
-    public static final DeferredRegister<PlacedFeature> PLACED_FEATURES = DeferredRegister.create(Registry.PLACED_FEATURE_REGISTRY, DenseOres.MOD_ID);
+    public static final ResourceKey<PlacedFeature> DENSE_COAL = createKey("dense_coal");
+    public static final ResourceKey<PlacedFeature> DENSE_COAL_BURIED = createKey("dense_coal_buried");
+    public static final ResourceKey<PlacedFeature> DENSE_IRON_SMALL = createKey("dense_iron_small");
+    public static final ResourceKey<PlacedFeature> DENSE_IRON_LARGE = createKey("dense_iron_large");
+    public static final ResourceKey<PlacedFeature> DENSE_COPPER = createKey("dense_copper");
+    public static final ResourceKey<PlacedFeature> DENSE_GOLD = createKey("dense_gold");
+    public static final ResourceKey<PlacedFeature> DENSE_GOLD_BURIED = createKey("dense_gold_buried");
+    public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_UPPER = createKey("dense_redstone_upper");
+    public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_LOWER = createKey("dense_redstone_lower");
+    public static final ResourceKey<PlacedFeature> DENSE_EMERALD = createKey("dense_emerald");
+    public static final ResourceKey<PlacedFeature> DENSE_LAPIS_UPPER = createKey("dense_lapis_upper");
+    public static final ResourceKey<PlacedFeature> DENSE_LAPIS_LOWER = createKey("dense_lapis_lower");
+    public static final ResourceKey<PlacedFeature> DENSE_DIAMOND_SMALL = createKey("dense_diamond_small");
+    public static final ResourceKey<PlacedFeature> DENSE_DIAMOND_LARGE = createKey("dense_diamond_large");
 
-    public static final RegistryObject<PlacedFeature> DENSE_COAL = PLACED_FEATURES.register("dense_coal", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_COAL.getHolder().get(), commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(64), VerticalAnchor.aboveBottom(256)))));
-    public static final RegistryObject<PlacedFeature> DENSE_COAL_BURIED = PLACED_FEATURES.register("dense_coal_buried", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_COAL_BURIED.getHolder().get(), commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(160)))));
-    public static final RegistryObject<PlacedFeature> DENSE_IRON_SMALL = PLACED_FEATURES.register("dense_iron_small", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_IRON_SMALL.getHolder().get(), commonOrePlacement(6, HeightRangePlacement.triangle(VerticalAnchor.absolute(176), VerticalAnchor.absolute(336)))));
-    public static final RegistryObject<PlacedFeature> DENSE_IRON_LARGE = PLACED_FEATURES.register("dense_iron_large", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_IRON_LARGE.getHolder().get(), commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-112), VerticalAnchor.aboveBottom(112)))));
-    public static final RegistryObject<PlacedFeature> DENSE_COPPER = PLACED_FEATURES.register("dense_copper", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_COPPER.getHolder().get(), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(16), VerticalAnchor.aboveBottom(144)))));
-    public static final RegistryObject<PlacedFeature> DENSE_GOLD = PLACED_FEATURES.register("dense_gold", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_GOLD.getHolder().get(), commonOrePlacement(4, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(64), VerticalAnchor.aboveBottom(128)))));
-    public static final RegistryObject<PlacedFeature> DENSE_GOLD_BURIED = PLACED_FEATURES.register("dense_gold_buried", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_GOLD_BURIED.getHolder().get(), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-96), VerticalAnchor.aboveBottom(96)))));
-    public static final RegistryObject<PlacedFeature> DENSE_REDSTONE_UPPER = PLACED_FEATURES.register("dense_redstone_upper", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_REDSTONE_UPPER.getHolder().get(), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
-    public static final RegistryObject<PlacedFeature> DENSE_REDSTONE_LOWER = PLACED_FEATURES.register("dense_redstone_lower", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_REDSTONE_LOWER.getHolder().get(), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-32), VerticalAnchor.aboveBottom(32)))));
-    public static final RegistryObject<PlacedFeature> DENSE_EMERALD = PLACED_FEATURES.register("dense_emerald", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_EMERALD.getHolder().get(), rareOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.top()))));
-    public static final RegistryObject<PlacedFeature> DENSE_LAPIS_UPPER = PLACED_FEATURES.register("dense_lapis_upper", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_LAPIS_UPPER.getHolder().get(), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(128)))));
-    public static final RegistryObject<PlacedFeature> DENSE_LAPIS_LOWER = PLACED_FEATURES.register("dense_lapis_lower", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_LAPIS_LOWER.getHolder().get(), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(64)))));
-    public static final RegistryObject<PlacedFeature> DENSE_DIAMOND_SMALL = PLACED_FEATURES.register("dense_diamond_small", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_DIAMOND_SMALL.getHolder().get(), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-90), VerticalAnchor.aboveBottom(90)))));
-    public static final RegistryObject<PlacedFeature> DENSE_DIAMOND_LARGE = PLACED_FEATURES.register("dense_diamond_large", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_DIAMOND_LARGE.getHolder().get(), rareOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80)))));
+    public static final ResourceKey<PlacedFeature> DENSE_NETHER_GOLD = createKey("dense_nether_gold");
+    public static final ResourceKey<PlacedFeature> DENSE_NETHER_QUARTZ = createKey("dense_nether_quartz");
+    public static final ResourceKey<PlacedFeature> ANCIENT_NETHER_UPPER = createKey("ancient_nether_upper");
+    public static final ResourceKey<PlacedFeature> ANCIENT_NETHER_LOWER = createKey("ancient_nether_lower");
 
-    public static final RegistryObject<PlacedFeature> DENSE_NETHER_GOLD = PLACED_FEATURES.register("dense_nether_gold", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_NETHER_GOLD.getHolder().get(), commonOrePlacement(7, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.belowTop(10)))));
-    public static final RegistryObject<PlacedFeature> DENSE_NETHER_QUARTZ = PLACED_FEATURES.register("dense_nether_quartz", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_DENSE_NETHER_QUARTZ.getHolder().get(), commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.belowTop(10)))));
-    public static final RegistryObject<PlacedFeature> ANCIENT_NETHER_UPPER = PLACED_FEATURES.register("ancient_nether_upper", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_ANCIENT_NETHER_UPPER.getHolder().get(), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(8), VerticalAnchor.belowTop(8)))));
-    public static final RegistryObject<PlacedFeature> ANCIENT_NETHER_LOWER = PLACED_FEATURES.register("ancient_nether_lower", () -> new PlacedFeature(DenseConfiguredFeatures.ORE_ANCIENT_NETHER_LOWER.getHolder().get(), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(20)))));
+    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+        HolderGetter<ConfiguredFeature<?, ?>> feature = context.lookup(Registries.CONFIGURED_FEATURE);
+
+        PlacementUtils.register(context, DENSE_COAL, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_COAL), commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(64), VerticalAnchor.aboveBottom(256))));
+        PlacementUtils.register(context, DENSE_COAL_BURIED, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_COAL_BURIED), commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(160))));
+        PlacementUtils.register(context, DENSE_IRON_SMALL, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_IRON_SMALL), commonOrePlacement(6, HeightRangePlacement.triangle(VerticalAnchor.absolute(176), VerticalAnchor.absolute(336))));
+        PlacementUtils.register(context, DENSE_IRON_LARGE, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_IRON_LARGE), commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-112), VerticalAnchor.aboveBottom(112))));
+        PlacementUtils.register(context, DENSE_COPPER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_COPPER), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(16), VerticalAnchor.aboveBottom(144))));
+        PlacementUtils.register(context, DENSE_GOLD, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_GOLD), commonOrePlacement(4, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(64), VerticalAnchor.aboveBottom(128))));
+        PlacementUtils.register(context, DENSE_GOLD_BURIED, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_GOLD_BURIED), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-96), VerticalAnchor.aboveBottom(96))));
+        PlacementUtils.register(context, DENSE_REDSTONE_UPPER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_REDSTONE_UPPER), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+        PlacementUtils.register(context, DENSE_REDSTONE_LOWER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_REDSTONE_LOWER), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-32), VerticalAnchor.aboveBottom(32))));
+        PlacementUtils.register(context, DENSE_EMERALD, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_EMERALD), rareOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.absolute(0), VerticalAnchor.top())));
+        PlacementUtils.register(context, DENSE_LAPIS_UPPER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_LAPIS_UPPER), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(128))));
+        PlacementUtils.register(context, DENSE_LAPIS_LOWER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_LAPIS_LOWER), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-64), VerticalAnchor.aboveBottom(64))));
+        PlacementUtils.register(context, DENSE_DIAMOND_SMALL, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_DIAMOND_SMALL), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-90), VerticalAnchor.aboveBottom(90))));
+        PlacementUtils.register(context, DENSE_DIAMOND_LARGE, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_DIAMOND_LARGE), rareOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+        PlacementUtils.register(context, DENSE_NETHER_GOLD, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_NETHER_GOLD), commonOrePlacement(7, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.belowTop(10))));
+        PlacementUtils.register(context, DENSE_NETHER_QUARTZ, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_NETHER_QUARTZ), commonOrePlacement(10, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(10), VerticalAnchor.belowTop(10))));
+        PlacementUtils.register(context, ANCIENT_NETHER_UPPER, feature.getOrThrow(DenseConfiguredFeatures.ORE_ANCIENT_NETHER_UPPER), commonOrePlacement(4, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(8), VerticalAnchor.belowTop(8))));
+        PlacementUtils.register(context, ANCIENT_NETHER_LOWER, feature.getOrThrow(DenseConfiguredFeatures.ORE_ANCIENT_NETHER_LOWER), commonOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(0), VerticalAnchor.aboveBottom(20))));
+    }
 
     public static List<PlacementModifier> orePlacement(PlacementModifier pModifier, PlacementModifier pHeightRange) {
         return List.of(pModifier, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
     }
+
     public static List<PlacementModifier> commonOrePlacement(int pAttempts, PlacementModifier pHeightRange) {
         return orePlacement(CountPlacement.of(pAttempts), pHeightRange);
     }
+
     public static List<PlacementModifier> rareOrePlacement(int pChances, PlacementModifier pHeightRange) {
         return orePlacement(RarityFilter.onAverageOnceEvery(pChances), pHeightRange);
+    }
+
+    private static ResourceKey<PlacedFeature> createKey(String key) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(DenseOres.MOD_ID, key));
     }
 }

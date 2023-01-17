@@ -2,13 +2,13 @@ package com.newjumper.denseores.datagen.assets;
 
 import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class DenseOresBlockStateProvider extends BlockStateProvider {
-    public DenseOresBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, DenseOres.MOD_ID, exFileHelper);
+    public DenseOresBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, DenseOres.MOD_ID, exFileHelper);
     }
 
     @Override

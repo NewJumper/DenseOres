@@ -3,21 +3,24 @@ package com.newjumper.denseores.datagen.data;
 import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseBlocks;
 import com.newjumper.denseores.content.DenseOresTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.minecraftforge.common.Tags;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.concurrent.CompletableFuture;
+
 public class DenseOresBlockTagsProvider extends BlockTagsProvider {
-    public DenseOresBlockTagsProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, DenseOres.MOD_ID, exFileHelper);
+    public DenseOresBlockTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, ExistingFileHelper exFileHelper) {
+        super(output, lookup, DenseOres.MOD_ID, exFileHelper);
     }
 
     @SuppressWarnings("unchecked")
     @Override
-    protected void addTags() {
+    protected void addTags(@NotNull HolderLookup.Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(DenseOresTags.Blocks.DENSE_STONE_ORES, DenseOresTags.Blocks.DENSE_DEEPSLATE_ORES, DenseOresTags.Blocks.DENSE_NETHERRACK_ORES);
         tag(BlockTags.NEEDS_STONE_TOOL).add(DenseBlocks.DENSE_IRON_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get(), DenseBlocks.DENSE_COPPER_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), DenseBlocks.DENSE_LAPIS_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(DenseBlocks.DENSE_GOLD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), DenseBlocks.DENSE_REDSTONE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), DenseBlocks.DENSE_EMERALD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), DenseBlocks.DENSE_DIAMOND_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());

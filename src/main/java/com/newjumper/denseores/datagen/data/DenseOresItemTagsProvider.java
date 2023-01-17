@@ -2,20 +2,24 @@ package com.newjumper.denseores.datagen.data;
 
 import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseOresTags;
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.concurrent.CompletableFuture;
+
 public class DenseOresItemTagsProvider extends ItemTagsProvider {
-    public DenseOresItemTagsProvider(DataGenerator gen, BlockTagsProvider blockTags, ExistingFileHelper exFileHelper) {
-        super(gen, blockTags, DenseOres.MOD_ID, exFileHelper);
+    public DenseOresItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, TagsProvider<Block> blockTags, ExistingFileHelper exFileHelper) {
+        super(output, lookup, blockTags, DenseOres.MOD_ID, exFileHelper);
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(@NotNull HolderLookup.Provider pProvider) {
         copy(Tags.Blocks.ORES, Tags.Items.ORES);
         copy(Tags.Blocks.ORES_COAL, Tags.Items.ORES_COAL);
         copy(Tags.Blocks.ORES_IRON, Tags.Items.ORES_IRON);

@@ -2,15 +2,15 @@ package com.newjumper.denseores.datagen.assets;
 
 import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 
 public class DenseOresItemModelProvider extends ItemModelProvider {
-    public DenseOresItemModelProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, DenseOres.MOD_ID, exFileHelper);
+    public DenseOresItemModelProvider(PackOutput output, ExistingFileHelper exFileHelper) {
+        super(output, DenseOres.MOD_ID, exFileHelper);
     }
 
     @Override

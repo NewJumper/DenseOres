@@ -1,6 +1,7 @@
 package com.newjumper.denseores.content;
 
 import com.newjumper.denseores.DenseOres;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -10,14 +11,13 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.RedStoneOreBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
 
 public class DenseBlocks {
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, DenseOres.MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, DenseOres.MOD_ID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, DenseOres.MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, DenseOres.MOD_ID);
 
     public static final RegistryObject<Block> DENSE_COAL_ORE = register("dense_coal_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.COAL_ORE), UniformInt.of(2, 4)));
     public static final RegistryObject<Block> DENSE_DEEPSLATE_COAL_ORE = register("dense_deepslate_coal_ore", () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_COAL_ORE), UniformInt.of(2, 4)));
@@ -42,7 +42,7 @@ public class DenseBlocks {
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> pBlock) {
         RegistryObject<T> block = BLOCKS.register(name, pBlock);
-        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().tab(DenseCreativeTab.DENSEORES)));
+        ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties()));
         return block;
     }
 }

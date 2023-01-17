@@ -2,14 +2,14 @@ package com.newjumper.denseores.datagen.assets;
 
 import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseBlocks;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ENLanguageProvider extends LanguageProvider {
-    public ENLanguageProvider(DataGenerator gen) {
-        super(gen, DenseOres.MOD_ID, "en_us");
+    public ENLanguageProvider(PackOutput output) {
+        super(output, DenseOres.MOD_ID, "en_us");
     }
 
     @Override
