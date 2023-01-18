@@ -2,8 +2,8 @@
   "feature": "denseores:ore_dense_emerald",
   "placement": [
     {
-      "type": "minecraft:rarity_filter",
-      "chance": 2
+      "type": "minecraft:count",
+      "count": 26
     },
     {
       "type": "minecraft:in_square"
@@ -16,7 +16,7 @@
           "below_top": 0
         },
         "min_inclusive": {
-          "absolute": 0
+          "above_bottom": 0
         }
       }
     },

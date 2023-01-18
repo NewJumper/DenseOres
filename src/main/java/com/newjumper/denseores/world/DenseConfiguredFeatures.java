@@ -73,7 +73,7 @@ public class DenseConfiguredFeatures {
         FeatureUtils.register(context, ORE_DENSE_NETHER_GOLD, Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST, 7));
         FeatureUtils.register(context, ORE_DENSE_NETHER_QUARTZ, Feature.ORE, new OreConfiguration(DENSE_QUARTZ_TARGET_LIST, 9, 0.1f));
         FeatureUtils.register(context, ORE_ANCIENT_NETHER_UPPER, Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST, 8, 1f));
-        FeatureUtils.register(context, ORE_ANCIENT_NETHER_LOWER, Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST, 7, 0.8f));
+        FeatureUtils.register(context, ORE_ANCIENT_NETHER_LOWER, Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST, 7, 0.9f));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String key) {

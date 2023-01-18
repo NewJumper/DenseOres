@@ -36,26 +36,26 @@ public class DenseOres {
     public void registerCreativeTab(final CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(new ResourceLocation(MOD_ID, "denseores"), builder -> builder.icon(() -> new ItemStack(DenseBlocks.DENSE_DIAMOND_ORE.get()))
                 .title(Component.translatable("itemGroup." + MOD_ID))
-                .displayItems(((pEnabledFeatures, pOutput, pDisplayOperatorCreativeTab) -> {
-                    pOutput.accept(DenseBlocks.DENSE_COAL_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_IRON_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_COPPER_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_GOLD_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_REDSTONE_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_EMERALD_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_LAPIS_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DIAMOND_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_NETHER_GOLD_ORE.get());
-                    pOutput.accept(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get());
-                    pOutput.accept(DenseBlocks.ANCIENT_NETHER_ORE.get());
+                .displayItems(((features, output, displayTab) -> {
+                    output.accept(DenseBlocks.DENSE_COAL_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get());
+                    output.accept(DenseBlocks.DENSE_IRON_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get());
+                    output.accept(DenseBlocks.DENSE_COPPER_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get());
+                    output.accept(DenseBlocks.DENSE_GOLD_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get());
+                    output.accept(DenseBlocks.DENSE_REDSTONE_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get());
+                    output.accept(DenseBlocks.DENSE_EMERALD_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get());
+                    output.accept(DenseBlocks.DENSE_LAPIS_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DIAMOND_ORE.get());
+                    output.accept(DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());
+                    output.accept(DenseBlocks.DENSE_NETHER_GOLD_ORE.get());
+                    output.accept(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get());
+                    output.accept(DenseBlocks.ANCIENT_NETHER_ORE.get());
                 }))
         );
     }
