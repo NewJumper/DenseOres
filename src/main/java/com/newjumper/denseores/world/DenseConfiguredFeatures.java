@@ -46,5 +46,5 @@ public class DenseConfiguredFeatures {
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_DENSE_NETHER_GOLD = CONFIGURED_FEATURES.register("ore_dense_nether_gold", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST.get(), 7)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_DENSE_NETHER_QUARTZ = CONFIGURED_FEATURES.register("ore_dense_nether_quartz", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(DENSE_QUARTZ_TARGET_LIST.get(), 9, 0.1f)));
     public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_ANCIENT_NETHER_UPPER = CONFIGURED_FEATURES.register("ore_ancient_nether_upper", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST.get(), 8, 1f)));
-    public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_ANCIENT_NETHER_LOWER = CONFIGURED_FEATURES.register("ore_ancient_nether_lower", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST.get(), 7, 0.8f)));
+    public static final RegistryObject<ConfiguredFeature<?, ?>> ORE_ANCIENT_NETHER_LOWER = CONFIGURED_FEATURES.register("ore_ancient_nether_lower", () -> new ConfiguredFeature<>(Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST.get(), 7, 0.9f)));
 }
