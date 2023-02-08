@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:compressing",
+  "ingredient": {
+    "item": "denseores:dense_deepslate_diamond_ore"
+  },
+  "result": {
+    "count": 3,
+    "item": "oredustry:dense_diamond"
+  }
+}
