@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:melting",
+  "ingredient": {
+    "item": "denseores:dense_deepslate_diamond_ore"
+  },
+  "result": {
+    "count": 5,
+    "item": "minecraft:diamond"
+  }
+}

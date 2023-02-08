@@ -1,0 +1,13 @@
+{
+  "type": "oredustry:separating",
+  "ore": {
+    "item": "denseores:dense_deepslate_iron_ore"
+  },
+  "resultblock": {
+    "item": "minecraft:deepslate"
+  },
+  "resultitem": {
+    "count": 5,
+    "item": "minecraft:raw_iron"
+  }
+}

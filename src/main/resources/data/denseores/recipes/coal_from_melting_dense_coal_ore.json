@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:melting",
+  "ingredient": {
+    "item": "denseores:dense_coal_ore"
+  },
+  "result": {
+    "count": 8,
+    "item": "minecraft:coal"
+  }
+}

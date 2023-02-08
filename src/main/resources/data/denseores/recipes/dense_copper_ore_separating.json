@@ -1,0 +1,14 @@
+{
+  "type": "oredustry:separating",
+  "ore": {
+    "item": "denseores:dense_copper_ore"
+  },
+  "resultblock": {
+    "item": "minecraft:stone"
+  },
+  "resultitem": {
+    "count": 5,
+    "item": "minecraft:raw_copper"
+  },
+  "time": 100
+}

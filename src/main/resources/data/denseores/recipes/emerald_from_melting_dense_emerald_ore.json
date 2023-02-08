@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:melting",
+  "ingredient": {
+    "item": "denseores:dense_emerald_ore"
+  },
+  "result": {
+    "count": 5,
+    "item": "minecraft:emerald"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:melting",
+  "ingredient": {
+    "item": "denseores:dense_deepslate_gold_ore"
+  },
+  "result": {
+    "count": 6,
+    "item": "minecraft:gold_ingot"
+  }
+}

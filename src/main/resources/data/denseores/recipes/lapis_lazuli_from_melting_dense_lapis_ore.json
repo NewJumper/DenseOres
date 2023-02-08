@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:melting",
+  "ingredient": {
+    "item": "denseores:dense_lapis_ore"
+  },
+  "result": {
+    "count": 8,
+    "item": "minecraft:lapis_lazuli"
+  }
+}

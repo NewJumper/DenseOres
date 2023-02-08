@@ -1,0 +1,14 @@
+{
+  "type": "oredustry:separating",
+  "ore": {
+    "item": "denseores:dense_lapis_ore"
+  },
+  "resultblock": {
+    "item": "minecraft:stone"
+  },
+  "resultitem": {
+    "count": 6,
+    "item": "minecraft:lapis_lazuli"
+  },
+  "time": 100
+}

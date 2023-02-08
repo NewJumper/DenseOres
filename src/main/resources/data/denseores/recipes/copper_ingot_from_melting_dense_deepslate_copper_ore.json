@@ -1,0 +1,10 @@
+{
+  "type": "oredustry:melting",
+  "ingredient": {
+    "item": "denseores:dense_deepslate_copper_ore"
+  },
+  "result": {
+    "count": 6,
+    "item": "minecraft:copper_ingot"
+  }
+}
