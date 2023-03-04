@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "minecraft:badlands",
+  "features": "denseores:dense_gold_extra",
+  "step": "underground_ores"
+}
