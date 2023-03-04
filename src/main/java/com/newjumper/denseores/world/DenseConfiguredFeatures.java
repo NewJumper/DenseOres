@@ -29,7 +29,7 @@ public class DenseConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_IRON_LARGE = registerKey("ore_dense_iron_large");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_COPPER = registerKey("ore_dense_copper");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_GOLD = registerKey("ore_dense_gold");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_GOLD_BURIED = registerKey("ore_dense_gold_buried");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_GOLD_EXTRA = registerKey("ore_dense_gold_extra");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_REDSTONE_UPPER = registerKey("ore_dense_redstone_upper");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_REDSTONE_LOWER = registerKey("ore_dense_redstone_lower");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_DENSE_EMERALD = registerKey("ore_dense_emerald");
@@ -60,11 +60,11 @@ public class DenseConfiguredFeatures {
         FeatureUtils.register(context, ORE_DENSE_IRON_SMALL, Feature.ORE, new OreConfiguration(DENSE_IRON_TARGET_LIST, 7));
         FeatureUtils.register(context, ORE_DENSE_IRON_LARGE, Feature.ORE, new OreConfiguration(DENSE_IRON_TARGET_LIST, 9, 0.5f));
         FeatureUtils.register(context, ORE_DENSE_COPPER, Feature.ORE, new OreConfiguration(DENSE_COPPER_TARGET_LIST, 8, 0.7f));
-        FeatureUtils.register(context, ORE_DENSE_GOLD, Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST, 7, 0.4f));
-        FeatureUtils.register(context, ORE_DENSE_GOLD_BURIED, Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST, 8, 0.9f));
+        FeatureUtils.register(context, ORE_DENSE_GOLD, Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST, 8, 0.3f));
+        FeatureUtils.register(context, ORE_DENSE_GOLD_EXTRA, Feature.ORE, new OreConfiguration(DENSE_GOLD_TARGET_LIST, 7, 0.2f));
         FeatureUtils.register(context, ORE_DENSE_REDSTONE_UPPER, Feature.ORE, new OreConfiguration(DENSE_REDSTONE_TARGET_LIST, 7, 0.7f));
         FeatureUtils.register(context, ORE_DENSE_REDSTONE_LOWER, Feature.ORE, new OreConfiguration(DENSE_REDSTONE_TARGET_LIST, 9, 0.6f));
-        FeatureUtils.register(context, ORE_DENSE_EMERALD, Feature.ORE, new OreConfiguration(DENSE_EMERALD_TARGET_LIST, 6, 0.3f));
+        FeatureUtils.register(context, ORE_DENSE_EMERALD, Feature.ORE, new OreConfiguration(DENSE_EMERALD_TARGET_LIST, 6, 0.5f));
         FeatureUtils.register(context, ORE_DENSE_LAPIS_UPPER, Feature.ORE, new OreConfiguration(DENSE_LAPIS_TARGET_LIST, 8));
         FeatureUtils.register(context, ORE_DENSE_LAPIS_LOWER, Feature.ORE, new OreConfiguration(DENSE_LAPIS_TARGET_LIST, 9, 0.2f));
         FeatureUtils.register(context, ORE_DENSE_DIAMOND_SMALL, Feature.ORE, new OreConfiguration(DENSE_DIAMOND_TARGET_LIST, 6, 0.4f));

@@ -20,7 +20,7 @@ public class DensePlacedFeatures {
     public static final ResourceKey<PlacedFeature> DENSE_IRON_LARGE = createKey("dense_iron_large");
     public static final ResourceKey<PlacedFeature> DENSE_COPPER = createKey("dense_copper");
     public static final ResourceKey<PlacedFeature> DENSE_GOLD = createKey("dense_gold");
-    public static final ResourceKey<PlacedFeature> DENSE_GOLD_BURIED = createKey("dense_gold_buried");
+    public static final ResourceKey<PlacedFeature> DENSE_GOLD_EXTRA = createKey("dense_gold_extra");
     public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_UPPER = createKey("dense_redstone_upper");
     public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_LOWER = createKey("dense_redstone_lower");
     public static final ResourceKey<PlacedFeature> DENSE_EMERALD = createKey("dense_emerald");
@@ -42,8 +42,8 @@ public class DensePlacedFeatures {
         PlacementUtils.register(context, DENSE_IRON_SMALL, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_IRON_SMALL), commonOrePlacement(20, HeightRangePlacement.triangle(VerticalAnchor.absolute(80), VerticalAnchor.absolute(384))));
         PlacementUtils.register(context, DENSE_IRON_LARGE, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_IRON_LARGE), commonOrePlacement(10, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-112), VerticalAnchor.aboveBottom(112))));
         PlacementUtils.register(context, DENSE_COPPER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_COPPER), commonOrePlacement(6, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(32), VerticalAnchor.aboveBottom(186))));
-        PlacementUtils.register(context, DENSE_GOLD, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_GOLD), commonOrePlacement(6, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(56), VerticalAnchor.aboveBottom(256))));
-        PlacementUtils.register(context, DENSE_GOLD_BURIED, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_GOLD_BURIED), rareOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-100), VerticalAnchor.aboveBottom(100))));
+        PlacementUtils.register(context, DENSE_GOLD, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_GOLD), commonOrePlacement(7, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-50), VerticalAnchor.aboveBottom(50))));
+        PlacementUtils.register(context, DENSE_GOLD_EXTRA, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_GOLD_EXTRA), commonOrePlacement(11, HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(46), VerticalAnchor.aboveBottom(256))));
         PlacementUtils.register(context, DENSE_REDSTONE_UPPER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_REDSTONE_UPPER), rareOrePlacement(2, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(80))));
         PlacementUtils.register(context, DENSE_REDSTONE_LOWER, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_REDSTONE_LOWER), commonOrePlacement(5, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-32), VerticalAnchor.aboveBottom(32))));
         PlacementUtils.register(context, DENSE_EMERALD, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_EMERALD), commonOrePlacement(26, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.top())));
