@@ -36,7 +36,7 @@ public class DenseOres {
     public void registerCreativeTab(final CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(new ResourceLocation(MOD_ID, "denseores"), builder -> builder.icon(() -> new ItemStack(DenseBlocks.DENSE_DIAMOND_ORE.get()))
                 .title(Component.translatable("itemGroup." + MOD_ID))
-                .displayItems(((features, output, displayTab) -> {
+                .displayItems((itemDisplay, output) -> {
                     output.accept(DenseBlocks.DENSE_COAL_ORE.get());
                     output.accept(DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get());
                     output.accept(DenseBlocks.DENSE_IRON_ORE.get());
@@ -56,7 +56,7 @@ public class DenseOres {
                     output.accept(DenseBlocks.DENSE_NETHER_GOLD_ORE.get());
                     output.accept(DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get());
                     output.accept(DenseBlocks.ANCIENT_NETHER_ORE.get());
-                }))
+                })
         );
     }
 

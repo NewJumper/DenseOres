@@ -15,7 +15,7 @@ import java.util.concurrent.CompletableFuture;
 
 public class DenseOresItemTagsProvider extends ItemTagsProvider {
     public DenseOresItemTagsProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, TagsProvider<Block> blockTags, ExistingFileHelper exFileHelper) {
-        super(output, lookup, blockTags, DenseOres.MOD_ID, exFileHelper);
+        super(output, lookup, blockTags.contentsGetter(), DenseOres.MOD_ID, exFileHelper);
     }
 
     @Override

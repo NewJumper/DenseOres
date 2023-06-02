@@ -70,7 +70,7 @@ public class DensePlacedFeatures {
         return orePlacement(RarityFilter.onAverageOnceEvery(pChances), pHeightRange);
     }
 
-    private static ResourceKey<PlacedFeature> createKey(String key) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(DenseOres.MOD_ID, key));
+    private static ResourceKey<PlacedFeature> createKey(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(DenseOres.MOD_ID, name));
     }
 }

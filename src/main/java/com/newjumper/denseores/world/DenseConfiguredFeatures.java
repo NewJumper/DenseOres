@@ -76,7 +76,7 @@ public class DenseConfiguredFeatures {
         FeatureUtils.register(context, ORE_ANCIENT_NETHER_LOWER, Feature.ORE, new OreConfiguration(ANCIENT_NETHER_TARGET_LIST, 7, 0.9f));
     }
 
-    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String key) {
-        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(DenseOres.MOD_ID, key));
+    public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+        return ResourceKey.create(Registries.CONFIGURED_FEATURE, new ResourceLocation(DenseOres.MOD_ID, name));
     }
 }
