@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[45,46)"
+loaderVersion="[46,47)"
 license="AGPL-3.0"
 
 [[mods]]
@@ -15,11 +15,11 @@ license="AGPL-3.0"
 [[dependencies.denseores]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.4, 1.20)"
+    versionRange="[1.20, 1.21)"
     side="BOTH"
 
 [[dependencies.denseores]]
     modId="forge"
     mandatory=true
-    versionRange="[45,46)"
+    versionRange="[46,47)"
     side="BOTH"
