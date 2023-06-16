@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[46,47)"
+loaderVersion="[47,48)"
 license="AGPL-3.0"
 
 [[mods]]
@@ -21,5 +21,5 @@ license="AGPL-3.0"
 [[dependencies.denseores]]
     modId="forge"
     mandatory=true
-    versionRange="[46,47)"
+    versionRange="[47,48)"
     side="BOTH"
