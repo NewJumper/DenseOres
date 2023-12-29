@@ -1,25 +1,25 @@
 modLoader="javafml"
-loaderVersion="[47,48)"
-license="AGPL-3.0"
+loaderVersion="${forge_version_range}"
+license="${mod_license}"
 
 [[mods]]
-    modId="denseores"
-    version="1.2.1"
-
-    displayName="Dense Ores"
-    authors="NewJumper"
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
     logoFile="banner.png"
+    authors="${mod_authors}"
+    description='''${mod_description}'''
 
-    description='''Ores that drop more materials!'''
-
-[[dependencies.denseores]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20, 1.21)"
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
     side="BOTH"
 
-[[dependencies.denseores]]
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
-    versionRange="[47,48)"
+    versionRange="${forge_version_range}"
+    ordering="NONE"
     side="BOTH"

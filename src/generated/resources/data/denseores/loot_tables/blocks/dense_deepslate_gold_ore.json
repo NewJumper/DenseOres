@@ -57,5 +57,6 @@
       ],
       "rolls": 1.0
     }
-  ]
+  ],
+  "random_sequence": "denseores:blocks/dense_deepslate_gold_ore"
 }

@@ -30,5 +30,6 @@
     "recipes": [
       "denseores:iron_ingot_from_blasting_dense_iron_ore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

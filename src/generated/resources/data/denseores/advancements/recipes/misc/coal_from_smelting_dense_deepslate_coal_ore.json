@@ -30,5 +30,6 @@
     "recipes": [
       "denseores:coal_from_smelting_dense_deepslate_coal_ore"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }
