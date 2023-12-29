@@ -58,6 +58,7 @@ public class DenseOres {
         DenseOresBlockTagsProvider blockTags = new DenseOresBlockTagsProvider(packOutput, event.getLookupProvider(), fileHelper);
         generator.addProvider(event.includeServer(), blockTags);
         generator.addProvider(event.includeServer(), new DenseOresItemTagsProvider(packOutput, event.getLookupProvider(), blockTags, fileHelper));
+        generator.addProvider(event.includeServer(), new DenseOresBiomeTagsProvider(packOutput, event.getLookupProvider(), fileHelper));
 
         generator.addProvider(event.includeServer(), new DenseOresWorldGen(packOutput, event.getLookupProvider()));
         generator.addProvider(event.includeServer(), new DenseOresLootTableProvider(packOutput));

@@ -1,11 +1,13 @@
 package com.newjumper.denseores.content;
 
 import com.newjumper.denseores.DenseOres;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.block.Block;
 
 public class DenseOresTags {
@@ -27,5 +29,9 @@ public class DenseOresTags {
         private static TagKey<Item> tag(String name) {
             return ItemTags.create(new ResourceLocation(DenseOres.MOD_ID, name));
         }
+    }
+
+    public static class Biomes {
+        public static final TagKey<Biome> IS_MOUNTAIN = TagKey.create(Registries.BIOME, new ResourceLocation(DenseOres.MOD_ID, "is_mountain"));
     }
 }
