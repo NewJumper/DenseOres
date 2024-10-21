@@ -17,7 +17,7 @@ public class DenseOresTags {
         public static final TagKey<Block> DENSE_NETHERRACK_ORES = tag("dense_netherrack_ores");
 
         private static TagKey<Block> tag(String name) {
-            return BlockTags.create(new ResourceLocation(DenseOres.MOD_ID, name));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath(DenseOres.MOD_ID, name));
         }
     }
 
@@ -27,11 +27,11 @@ public class DenseOresTags {
         public static final TagKey<Item> DENSE_NETHERRACK_ORES = tag("dense_netherrack_ores");
 
         private static TagKey<Item> tag(String name) {
-            return ItemTags.create(new ResourceLocation(DenseOres.MOD_ID, name));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath(DenseOres.MOD_ID, name));
         }
     }
 
     public static class Biomes {
-        public static final TagKey<Biome> IS_MOUNTAIN = TagKey.create(Registries.BIOME, new ResourceLocation(DenseOres.MOD_ID, "is_mountain"));
+        public static final TagKey<Biome> IS_MOUNTAIN = TagKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath(DenseOres.MOD_ID, "is_mountain"));
     }
 }

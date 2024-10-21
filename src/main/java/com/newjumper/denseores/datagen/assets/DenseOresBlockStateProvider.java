@@ -3,8 +3,8 @@ package com.newjumper.denseores.datagen.assets;
 import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseBlocks;
 import net.minecraft.data.PackOutput;
-import net.minecraftforge.client.model.generators.BlockStateProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class DenseOresBlockStateProvider extends BlockStateProvider {
     public DenseOresBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {

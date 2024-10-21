@@ -3,7 +3,7 @@ package com.newjumper.denseores.world;
 import com.newjumper.denseores.DenseOres;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -14,27 +14,27 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class DensePlacedFeatures {
-    public static final ResourceKey<PlacedFeature> DENSE_COAL = createKey("dense_coal");
-    public static final ResourceKey<PlacedFeature> DENSE_COAL_BURIED = createKey("dense_coal_buried");
-    public static final ResourceKey<PlacedFeature> DENSE_IRON_SMALL = createKey("dense_iron_small");
-    public static final ResourceKey<PlacedFeature> DENSE_IRON_LARGE = createKey("dense_iron_large");
-    public static final ResourceKey<PlacedFeature> DENSE_COPPER = createKey("dense_copper");
-    public static final ResourceKey<PlacedFeature> DENSE_GOLD = createKey("dense_gold");
-    public static final ResourceKey<PlacedFeature> DENSE_GOLD_EXTRA = createKey("dense_gold_extra");
-    public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_UPPER = createKey("dense_redstone_upper");
-    public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_LOWER = createKey("dense_redstone_lower");
-    public static final ResourceKey<PlacedFeature> DENSE_EMERALD = createKey("dense_emerald");
-    public static final ResourceKey<PlacedFeature> DENSE_LAPIS_UPPER = createKey("dense_lapis_upper");
-    public static final ResourceKey<PlacedFeature> DENSE_LAPIS_LOWER = createKey("dense_lapis_lower");
-    public static final ResourceKey<PlacedFeature> DENSE_DIAMOND_SMALL = createKey("dense_diamond_small");
-    public static final ResourceKey<PlacedFeature> DENSE_DIAMOND_LARGE = createKey("dense_diamond_large");
+    public static final ResourceKey<PlacedFeature> DENSE_COAL = create("dense_coal");
+    public static final ResourceKey<PlacedFeature> DENSE_COAL_BURIED = create("dense_coal_buried");
+    public static final ResourceKey<PlacedFeature> DENSE_IRON_SMALL = create("dense_iron_small");
+    public static final ResourceKey<PlacedFeature> DENSE_IRON_LARGE = create("dense_iron_large");
+    public static final ResourceKey<PlacedFeature> DENSE_COPPER = create("dense_copper");
+    public static final ResourceKey<PlacedFeature> DENSE_GOLD = create("dense_gold");
+    public static final ResourceKey<PlacedFeature> DENSE_GOLD_EXTRA = create("dense_gold_extra");
+    public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_UPPER = create("dense_redstone_upper");
+    public static final ResourceKey<PlacedFeature> DENSE_REDSTONE_LOWER = create("dense_redstone_lower");
+    public static final ResourceKey<PlacedFeature> DENSE_EMERALD = create("dense_emerald");
+    public static final ResourceKey<PlacedFeature> DENSE_LAPIS_UPPER = create("dense_lapis_upper");
+    public static final ResourceKey<PlacedFeature> DENSE_LAPIS_LOWER = create("dense_lapis_lower");
+    public static final ResourceKey<PlacedFeature> DENSE_DIAMOND_SMALL = create("dense_diamond_small");
+    public static final ResourceKey<PlacedFeature> DENSE_DIAMOND_LARGE = create("dense_diamond_large");
 
-    public static final ResourceKey<PlacedFeature> DENSE_NETHER_GOLD = createKey("dense_nether_gold");
-    public static final ResourceKey<PlacedFeature> DENSE_NETHER_QUARTZ = createKey("dense_nether_quartz");
-    public static final ResourceKey<PlacedFeature> ANCIENT_NETHER_UPPER = createKey("ancient_nether_upper");
-    public static final ResourceKey<PlacedFeature> ANCIENT_NETHER_LOWER = createKey("ancient_nether_lower");
+    public static final ResourceKey<PlacedFeature> DENSE_NETHER_GOLD = create("dense_nether_gold");
+    public static final ResourceKey<PlacedFeature> DENSE_NETHER_QUARTZ = create("dense_nether_quartz");
+    public static final ResourceKey<PlacedFeature> ANCIENT_NETHER_UPPER = create("ancient_nether_upper");
+    public static final ResourceKey<PlacedFeature> ANCIENT_NETHER_LOWER = create("ancient_nether_lower");
 
-    public static void bootstrap(BootstapContext<PlacedFeature> context) {
+    public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> feature = context.lookup(Registries.CONFIGURED_FEATURE);
 
         PlacementUtils.register(context, DENSE_COAL, feature.getOrThrow(DenseConfiguredFeatures.ORE_DENSE_COAL), commonOrePlacement(10, HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(64), VerticalAnchor.top())));
@@ -58,19 +58,15 @@ public class DensePlacedFeatures {
         PlacementUtils.register(context, ANCIENT_NETHER_LOWER, feature.getOrThrow(DenseConfiguredFeatures.ORE_ANCIENT_NETHER_LOWER), commonOrePlacement(3, HeightRangePlacement.triangle(VerticalAnchor.bottom(), VerticalAnchor.aboveBottom(24))));
     }
 
-    public static List<PlacementModifier> orePlacement(PlacementModifier pModifier, PlacementModifier pHeightRange) {
-        return List.of(pModifier, InSquarePlacement.spread(), pHeightRange, BiomeFilter.biome());
+    public static List<PlacementModifier> commonOrePlacement(int attempts, PlacementModifier range) {
+        return List.of(CountPlacement.of(attempts), InSquarePlacement.spread(), range, BiomeFilter.biome());
     }
 
-    public static List<PlacementModifier> commonOrePlacement(int pAttempts, PlacementModifier pHeightRange) {
-        return orePlacement(CountPlacement.of(pAttempts), pHeightRange);
+    public static List<PlacementModifier> rareOrePlacement(int chance, PlacementModifier range) {
+        return List.of(RarityFilter.onAverageOnceEvery(chance), InSquarePlacement.spread(), range, BiomeFilter.biome());
     }
 
-    public static List<PlacementModifier> rareOrePlacement(int pChances, PlacementModifier pHeightRange) {
-        return orePlacement(RarityFilter.onAverageOnceEvery(pChances), pHeightRange);
-    }
-
-    private static ResourceKey<PlacedFeature> createKey(String name) {
-        return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(DenseOres.MOD_ID, name));
+    private static ResourceKey<PlacedFeature> create(String name) {
+        return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(DenseOres.MOD_ID, name));
     }
 }

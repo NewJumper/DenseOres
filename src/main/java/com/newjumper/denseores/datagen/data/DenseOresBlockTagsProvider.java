@@ -6,9 +6,9 @@ import com.newjumper.denseores.content.DenseOresTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
-import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.BlockTagsProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.common.Tags;
+import net.neoforged.neoforge.common.data.BlockTagsProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -20,7 +20,7 @@ public class DenseOresBlockTagsProvider extends BlockTagsProvider {
 
     @SuppressWarnings("unchecked")
     @Override
-    protected void addTags(@NotNull HolderLookup.Provider pProvider) {
+    protected void addTags(HolderLookup.@NotNull Provider pProvider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE).addTags(DenseOresTags.Blocks.DENSE_STONE_ORES, DenseOresTags.Blocks.DENSE_DEEPSLATE_ORES, DenseOresTags.Blocks.DENSE_NETHERRACK_ORES);
         tag(BlockTags.NEEDS_STONE_TOOL).add(DenseBlocks.DENSE_IRON_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get(), DenseBlocks.DENSE_COPPER_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), DenseBlocks.DENSE_LAPIS_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get());
         tag(BlockTags.NEEDS_IRON_TOOL).add(DenseBlocks.DENSE_GOLD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), DenseBlocks.DENSE_REDSTONE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), DenseBlocks.DENSE_EMERALD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), DenseBlocks.DENSE_DIAMOND_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());
@@ -53,11 +53,5 @@ public class DenseOresBlockTagsProvider extends BlockTagsProvider {
         tag(DenseOresTags.Blocks.DENSE_STONE_ORES).add(DenseBlocks.DENSE_COAL_ORE.get(), DenseBlocks.DENSE_IRON_ORE.get(), DenseBlocks.DENSE_COPPER_ORE.get(), DenseBlocks.DENSE_GOLD_ORE.get(), DenseBlocks.DENSE_REDSTONE_ORE.get(), DenseBlocks.DENSE_EMERALD_ORE.get(), DenseBlocks.DENSE_LAPIS_ORE.get(), DenseBlocks.DENSE_DIAMOND_ORE.get());
         tag(DenseOresTags.Blocks.DENSE_DEEPSLATE_ORES).add(DenseBlocks.DENSE_DEEPSLATE_COAL_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_IRON_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_COPPER_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_GOLD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_REDSTONE_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_EMERALD_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_LAPIS_ORE.get(), DenseBlocks.DENSE_DEEPSLATE_DIAMOND_ORE.get());
         tag(DenseOresTags.Blocks.DENSE_NETHERRACK_ORES).add(DenseBlocks.DENSE_NETHER_GOLD_ORE.get(), DenseBlocks.DENSE_NETHER_QUARTZ_ORE.get(), DenseBlocks.ANCIENT_NETHER_ORE.get());
-    }
-
-    @NotNull
-    @Override
-    public String getName() {
-        return "Block Tags";
     }
 }

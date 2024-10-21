@@ -4,9 +4,9 @@ import com.newjumper.denseores.DenseOres;
 import com.newjumper.denseores.content.DenseBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.client.model.generators.ItemModelProvider;
-import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
+import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 public class DenseOresItemModelProvider extends ItemModelProvider {
     public DenseOresItemModelProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -37,7 +37,7 @@ public class DenseOresItemModelProvider extends ItemModelProvider {
         blockModel(DenseBlocks.ANCIENT_NETHER_ORE);
     }
 
-    public void blockModel(RegistryObject<Block> block) {
+    public void blockModel(DeferredBlock<Block> block) {
         withExistingParent(block.getId().getPath(), modLoc("block/" + block.getId().getPath()));
     }
 }
