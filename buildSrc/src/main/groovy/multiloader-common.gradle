@@ -52,6 +52,7 @@ processResources {
             'minecraft_version_range'      : minecraft_version_range,
             'java_version'                 : java_version,
             'fabric_version'               : fabric_version,
+            'fabric_version_range'         : fabric_version_range,
             'fabric_api_version'           : fabric_api_version,
             'neo_version'                  : neo_version,
             'neo_version_range'            : neo_version_range,
