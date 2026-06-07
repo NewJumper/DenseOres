@@ -25,8 +25,8 @@ public class DenseBlocks {
 
     public static Block DENSE_COAL_ORE = oreBlock("dense_coal_ore", UniformInt.of(2, 4), Blocks.COAL_ORE);
     public static Block DENSE_DEEPSLATE_COAL_ORE = oreBlock("dense_deepslate_coal_ore", UniformInt.of(2, 4), Blocks.DEEPSLATE_COAL_ORE);
-    public static Block DENSE_IRON_ORE = oreBlock("dense_iron_ore", UniformInt.of(2, 4), Blocks.IRON_ORE);
-    public static Block DENSE_DEEPSLATE_IRON_ORE = oreBlock("dense_deepslate_iron_ore", UniformInt.of(2, 4), Blocks.DEEPSLATE_IRON_ORE);
+    public static Block DENSE_IRON_ORE = oreBlock("dense_iron_ore", ConstantInt.of(0), Blocks.IRON_ORE);
+    public static Block DENSE_DEEPSLATE_IRON_ORE = oreBlock("dense_deepslate_iron_ore", ConstantInt.of(0), Blocks.DEEPSLATE_IRON_ORE);
     public static Block DENSE_COPPER_ORE = oreBlock("dense_copper_ore", ConstantInt.of(0), Blocks.COPPER_ORE);
     public static Block DENSE_DEEPSLATE_COPPER_ORE = oreBlock("dense_deepslate_copper_ore", ConstantInt.of(0), Blocks.DEEPSLATE_COPPER_ORE);
     public static Block DENSE_GOLD_ORE = oreBlock("dense_gold_ore", ConstantInt.of(0), Blocks.GOLD_ORE);
