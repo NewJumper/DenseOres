@@ -42,7 +42,7 @@ public class DenseBlocks {
 
     public static Block DENSE_NETHER_GOLD_ORE = oreBlock("dense_nether_gold_ore", UniformInt.of(2, 3), Blocks.NETHER_GOLD_ORE);
     public static Block DENSE_NETHER_QUARTZ_ORE = oreBlock("dense_nether_quartz_ore", UniformInt.of(4, 7), Blocks.NETHER_QUARTZ_ORE);
-    public static Block ANCIENT_NETHER_ORE = register("ancient_nether_ore", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).strength(15f, 500f));
+    public static Block ANCIENT_NETHER_ORE = register("ancient_nether_ore", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.ANCIENT_DEBRIS).strength(30f, 500f));
 
     private static Block oreBlock(String name, IntProvider xpRange, Block copy) {
         DropExperienceBlock block = new DropExperienceBlock(xpRange, BlockBehaviour.Properties.ofFullCopy(copy).setId(ResourceKey.create(Registries.BLOCK, DenseOres.id(name))));
