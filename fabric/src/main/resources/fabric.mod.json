@@ -5,7 +5,7 @@
     "name": "${mod_name}",
     "description": "${description}",
     "authors": [
-        "${mod_authors}"
+        "${mod_author}"
     ],
     "license": "${mod_license}",
     "icon": "icon.png",
@@ -19,6 +19,6 @@
         "minecraft": "~${minecraft_version}",
         "java": ">=${java_version}",
         "fabricloader": "${fabric_version_range}",
-        "fabric-api": "*"
+        "fabric-api": "${fabric_api_version_range}"
     }
 }
