@@ -1,4 +1,4 @@
-// 26.1.2	2026-06-06T18:48:27.207937	Tags for minecraft:block mod id denseores
+// 26.2	2026-06-24T17:08:33.8600557	Tags for minecraft:block mod id denseores
 959bf271182f5dd89febc752b0d31489ff65e408 data/c/tags/block/ores.json
 6957be9a9b0c5e96a17091a6e41baf5a06c16431 data/c/tags/block/ores/coal.json
 936b7f4082a226774e31d184060fd3a6bb8cabb6 data/c/tags/block/ores/copper.json
@@ -16,15 +16,10 @@ af4f522f923ede68b4afa9ae32b12913a363a668 data/c/tags/block/ores_in_ground/stone.
 7b4e30bd74191cdced88aabb405cc1a68118ba1f data/denseores/tags/block/dense_deepslate_ores.json
 9c8c0c25ac290bccc43a9943809dbc82384b4bfb data/denseores/tags/block/dense_netherrack_ores.json
 a8ad10e8ab71dc73288726d297dc5c4e0830e39a data/denseores/tags/block/dense_stone_ores.json
-6957be9a9b0c5e96a17091a6e41baf5a06c16431 data/minecraft/tags/block/coal_ores.json
 936b7f4082a226774e31d184060fd3a6bb8cabb6 data/minecraft/tags/block/copper_ores.json
-8ae6d4cbe1390545bb127c58b06192054a38f36f data/minecraft/tags/block/diamond_ores.json
-886fecbbbbc9f39d45aaf2b0c254e61e1c818567 data/minecraft/tags/block/emerald_ores.json
 12550fa8ae1d288203d95ce810e8b5cbe1c94e85 data/minecraft/tags/block/gold_ores.json
 7e49fc8f6feb78eb51005c70776c224a914e9a33 data/minecraft/tags/block/iron_ores.json
-65d765a0ca193d2cf7af8db0b2bde3d02cfe6f65 data/minecraft/tags/block/lapis_ores.json
 378157c941ada5037322ff127dba8c91891d916b data/minecraft/tags/block/mineable/pickaxe.json
 705d7b11d8cd18c92ac16c9451dd085ed4d83b6a data/minecraft/tags/block/needs_diamond_tool.json
 b817724e4304e098fe7167bb4b6fc505c39c48f6 data/minecraft/tags/block/needs_iron_tool.json
 cedb73a2279d880576ba70a92fac34ac61593d54 data/minecraft/tags/block/needs_stone_tool.json
-bfa230fb90d14876bdc769c790f92c03fd52d3a0 data/minecraft/tags/block/redstone_ores.json

@@ -1,7 +1,5 @@
 {
   "type": "minecraft:smelting",
-  "category": "misc",
-  "cookingtime": 200,
   "experience": 4.0,
   "group": "diamond",
   "ingredient": "denseores:dense_diamond_ore",

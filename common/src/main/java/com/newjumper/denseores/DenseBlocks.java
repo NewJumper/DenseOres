@@ -52,7 +52,7 @@ public class DenseBlocks {
     }
 
     private static Block register(String name, Function<BlockBehaviour.Properties, ? extends Block> func, BlockBehaviour.Properties properties) {
-        Block block = func.apply(properties.setId(ResourceKey.create(Registries.BLOCK, DenseOres.id(name))));
+        Block block = func.apply(properties.setId(DenseBlockIds.BLOCK_IDS.get(name)));
         BLOCKS.put(name, block);
         ITEMS.put(name, new BlockItem(block, new Item.Properties().setId(ResourceKey.create(Registries.ITEM, DenseOres.id(name)))));
         return block;
